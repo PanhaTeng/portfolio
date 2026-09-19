@@ -1,6 +1,6 @@
 {
-  "name": "Modular Portfolio & Admin Portal",
-  "description": "Production-ready personal portfolio website built with an Angular standalone frontend, Spring Boot modular monolith backend, SQLite persistence, and secure session-based admin portal.",
+  "name": "Panha Teng - Financial Systems Backend Developer",
+  "description": "Portfolio of Panha Teng, Senior Backend Developer specializing in financial systems, C#/.NET Core, Java Spring Boot, banking integrations (Bakong, T24, eKYC, AIA), and resilient backend workflows.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

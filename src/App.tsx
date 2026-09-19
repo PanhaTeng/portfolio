@@ -37,10 +37,20 @@ const INITIAL_MESSAGES: ContactMessage[] = [
 export default function App() {
   const [activeView, setActiveView] = useState<'portfolio' | 'admin' | 'architecture' | 'api'>('portfolio');
   const [isDark, setIsDark] = useState<boolean>(() => {
+    const saved = localStorage.getItem('pt_theme');
+    if (saved) return saved === 'dark';
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   });
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState<boolean>(false);
-  const [messages, setMessages] = useState<ContactMessage[]>(INITIAL_MESSAGES);
+  const [messages, setMessages] = useState<ContactMessage[]>(() => {
+    try {
+      const saved = localStorage.getItem('pt_messages');
+      if (saved) return JSON.parse(saved);
+    } catch {
+      // fallback
+    }
+    return INITIAL_MESSAGES;
+  });
   const [analytics, setAnalytics] = useState<AnalyticsData>({
     totalPageViews: 142,
     uniqueVisitors: 68,
@@ -60,10 +70,20 @@ export default function App() {
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add('dark');
+      localStorage.setItem('pt_theme', 'dark');
     } else {
       document.documentElement.classList.remove('dark');
+      localStorage.setItem('pt_theme', 'light');
     }
   }, [isDark]);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('pt_messages', JSON.stringify(messages));
+    } catch {
+      // ignore
+    }
+  }, [messages]);
 
   const toggleTheme = () => {
     setIsDark(prev => !prev);

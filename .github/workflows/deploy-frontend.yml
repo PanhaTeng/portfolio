@@ -1,12 +1,9 @@
-name: Deploy Angular Frontend to GitHub Pages
+name: Deploy Portfolio to GitHub Pages
 
 on:
   push:
     branches:
       - main
-    paths:
-      - 'frontend/**'
-      - '.github/workflows/deploy-frontend.yml'
   workflow_dispatch:
 
 permissions:
@@ -20,7 +17,7 @@ concurrency:
 
 jobs:
   build:
-    name: Build Angular SPA
+    name: Build Portfolio SPA
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -30,31 +27,22 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
-          cache-dependency-path: 'frontend/package-lock.json'
 
-      - name: Install Frontend Dependencies
-        working-directory: frontend
-        run: npm ci
+      - name: Install Dependencies
+        run: npm install
 
-      - name: Build Angular Application for GitHub Pages
-        working-directory: frontend
-        # Extracts repository name for the base-href path, e.g. /<repo-name>/
-        run: |
-          REPO_NAME=$(echo "${{ github.repository }}" | cut -d '/' -f 2)
-          echo "Building with base-href: /${REPO_NAME}/"
-          npm run build -- --configuration production --base-href "/${REPO_NAME}/"
+      - name: Build Application for GitHub Pages
+        run: npm run build
 
       - name: Configure GitHub Pages SPA 404 Fallback
-        working-directory: frontend
         run: |
-          # Copy index.html to 404.html to support client-side routing on GitHub Pages
-          cp dist/portfolio-frontend/browser/index.html dist/portfolio-frontend/browser/404.html
+          # Copy index.html to 404.html so direct page refresh works on GitHub Pages
+          cp dist/index.html dist/404.html
 
       - name: Upload GitHub Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: frontend/dist/portfolio-frontend/browser
+          path: dist
 
   deploy:
     name: Deploy to GitHub Pages
@@ -67,3 +55,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+

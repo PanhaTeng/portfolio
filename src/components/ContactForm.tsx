@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Send, CheckCircle2, AlertCircle, Mail } from 'lucide-react';
 import { ContactMessage } from '../types';
 
 interface ContactFormProps {
@@ -66,11 +66,19 @@ export const ContactForm: React.FC<ContactFormProps> = ({ onMessageSent }) => {
             Inquiries
           </span>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 mt-1">
-            Initiate Contact
+            Get In Touch
           </h2>
           <p className="text-neutral-500 dark:text-neutral-400 text-xs sm:text-sm mt-1">
-            Send an inquiry directly to the Spring Boot message queue. All submissions are audited and stored in SQLite.
+            Reach out directly for senior backend, financial systems integration, or architectural consulting.
           </p>
+          <div className="mt-3 flex justify-center">
+            <a 
+              href="mailto:tengpanha2002@gmail.com"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-neutral-800 dark:text-neutral-200 border border-neutral-200 dark:border-neutral-700 transition-colors">
+              <Mail className="w-3.5 h-3.5 text-blue-500" />
+              <span>Direct Email: tengpanha2002@gmail.com</span>
+            </a>
+          </div>
         </div>
 
         {submitted ? (
