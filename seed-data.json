@@ -1,0 +1,130 @@
+{
+  "personal": {
+    "name": "Panha Teng",
+    "title": "Senior Backend Developer · Financial Systems & Architecture",
+    "tagline": "Building mission-critical Web APIs, banking integrations, and resilient workflows (.NET, C#, Java, Python).",
+    "location": "Phnom Penh, Cambodia",
+    "email": "tengpanha2002@gmail.com",
+    "github": "https://github.com/tengpanha",
+    "linkedin": "https://linkedin.com",
+    "bio": "Backend developer with experience in financial systems, mostly using C#/.NET, building Web APIs and services used by web and mobile front-ends. I've worked on backend workflow design, cross-functional integration, authorization and security (OAuth2, JWT, IdentityServer, AES/RSA/HMAC), performance optimization, and production support for banking and digital payment platforms. Hands-on experience with PHP, Python, and RESTful API design, front-end basics (HTML, JavaScript, CSS), and Java/Spring Boot through personal projects and formal training."
+  },
+  "stats": [
+    { "label": "Years in Financial Systems", "value": "4+ Years" },
+    { "label": "Banking & Wallet APIs", "value": "100+" },
+    { "label": "Core Workflows Built", "value": "Maker-Checker" },
+    { "label": "Production Uptime Standard", "value": "99.99%" }
+  ],
+  "skills": [
+    {
+      "category": "Backend & Frameworks",
+      "items": [
+        "C# & .NET Core / ASP.NET Core",
+        "Web API & MVC",
+        "Java & Spring Boot 3",
+        "Spring Security & JPA/Hibernate",
+        "Python & FastAPI",
+        "PHP & REST API Design"
+      ]
+    },
+    {
+      "category": "Financial Integration & Workflows",
+      "items": [
+        "Bakong & eKYC/CamDX Integration",
+        "Temenos T24 Core API Integration",
+        "AIA Insurance Backend Integration",
+        "Maker-Checker Customer Workflow",
+        "ESB Concepts & WSO2 API Mediation",
+        "Mobile Wallet (IGlassV2) & Bulk Processing"
+      ]
+    },
+    {
+      "category": "Security & Cryptography",
+      "items": [
+        "OAuth2 & OpenID Connect",
+        "IdentityServer (.NET 6)",
+        "JWT & Stateless Claims Auth",
+        "AES-256, RSA & HMAC Payload Signing",
+        "Basic Authentication & RBAC Filters"
+      ]
+    },
+    {
+      "category": "Databases, Caching & Infrastructure",
+      "items": [
+        "SQL Server & PostgreSQL (Performance Tuning)",
+        "Oracle & PL/SQL Banking Schemas",
+        "Redis Central Cache Server & RabbitMQ",
+        "Docker & Multi-Server Container Clusters",
+        "IIS Server Optimization & Chunked Uploads",
+        "Git & GitLab CI/CD"
+      ]
+    }
+  ],
+  "education": {
+    "degree": "Bachelor of Management Information System (MIS)",
+    "institution": "SETEC Institute",
+    "period": "2020 – 2024",
+    "status": "Graduated"
+  },
+  "formalTraining": {
+    "title": "Enterprise Java, Spring Boot & Microservices",
+    "institution": "Piseth Java School",
+    "topics": ["Spring Boot 3", "Spring Data JPA & Hibernate", "Spring Security 6", "Microservices & Modular Monoliths"]
+  },
+  "languages": [
+    { "name": "Khmer", "level": "Native" },
+    { "name": "English", "level": "Professional Working Proficiency" }
+  ],
+  "projects": [
+    {
+      "id": "amret-maker-checker",
+      "title": "Maker-Checker Customer & Loan Engine",
+      "tagline": "AMRET Microfinance Core Customer & Refinance Workflow",
+      "description": "Maker-Checker customer management workflow (MYAPP) featuring duplicate checking, multi-stage approval, and customer amendment. Engineered loan settlement features (Paid Off, Principal Decrease), collateral loan optimizations, chunked uploads (>30MB), and AIA Insurance API integration.",
+      "tags": ["C#", ".NET Core", "SQL Server", "OAuth2", "JWT", "IdentityServer", "IIS", "AIA Insurance"],
+      "githubUrl": "https://github.com/tengpanha",
+      "featured": true,
+      "category": "Enterprise"
+    },
+    {
+      "id": "sbi-mobile-banking-esb",
+      "title": "SBI Mobile Banking Integration Hub & ESB",
+      "tagline": "SBI Bank Mobile Banking Platform (via Ly Hour Pay Pro)",
+      "description": "Backend APIs powering the SBI MB mobile app with central Redis cache servers and an ESB-like integration fabric connecting Bakong, eKYC/CamDX, Temenos T24 Core API, Dispute APIs, AML services, Mekong SMS, email, and card modules.",
+      "tags": ["ASP.NET Core", "C#", "Bakong", "T24 Core API", "eKYC/CamDX", "Redis Cache", "RabbitMQ", "WSO2"],
+      "githubUrl": "https://github.com/tengpanha",
+      "featured": true,
+      "category": "Enterprise"
+    },
+    {
+      "id": "iglass-wallet-platform",
+      "title": "IGlassV2 Mobile Wallet & Bulk Payment Hub",
+      "tagline": "Ly Hour Pay Pro Mobile Wallet Management Platform",
+      "description": "Platform orchestrating the Ly Hour wallet mobile app. Engineered card controls, approval workflows, transaction limits, fee/incentive matrices, remittance, Bakong integration, and agent/salary bulk upload systems.",
+      "tags": ["C#", ".NET", "SQL Server", "Bakong", "Bulk Processing", "Redis", "Payment Gateway"],
+      "githubUrl": "https://github.com/tengpanha",
+      "featured": true,
+      "category": "Systems"
+    },
+    {
+      "id": "ppwsa-microservices",
+      "title": "PPWSA Water Utility Portal & Microservices Inventory",
+      "tagline": "Government Utility Web Portal & .NET 6 Microservices (Bill24 / ONE Technology)",
+      "description": "Web portal for Phnom Penh Water Supply Authority and a containerized .NET 6 microservices inventory system deployed across multiple servers with Docker, centralized IdentityServer, and OAuth2 security.",
+      "tags": [".NET 6", "FastAPI / Python", "IdentityServer", "OAuth2", "Docker", "PostgreSQL", "PHP"],
+      "githubUrl": "https://github.com/tengpanha",
+      "featured": false,
+      "category": "Web & Cloud"
+    },
+    {
+      "id": "spring-modular-monolith",
+      "title": "Modular Monolith Banking Architecture",
+      "tagline": "Enterprise Spring Boot 3 Modular Backend with SQLite & Session Security",
+      "description": "Modular monolith implementation with 5 isolated submodules, HttpOnly session authentication, SHA-256 IP anonymization, and clear domain boundaries for future microservices extraction.",
+      "tags": ["Java 17", "Spring Boot 3", "Spring Security 6", "JPA", "SQLite", "Docker"],
+      "githubUrl": "https://github.com/tengpanha/modular-portfolio",
+      "featured": true,
+      "category": "Enterprise"
+    }
+  ]
+}

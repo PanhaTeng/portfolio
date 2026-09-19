@@ -1,0 +1,33 @@
+# Maven Build Outputs
+target/
+*.war
+*.nar
+*.ear
+*.class
+
+# SQLite Database and Persistent Storage
+data/
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# Logs
+logs/
+*.log
+
+# IntelliJ IDEA & Eclipse
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+.vscode/
+
+# OS Specific
+.DS_Store
+Thumbs.db
+
+# Sensitive local env
+.env
+application-local.yml

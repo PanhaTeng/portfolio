@@ -1,0 +1,7 @@
+{
+  "name": "Modular Portfolio & Admin Portal",
+  "description": "Production-ready personal portfolio website built with an Angular standalone frontend, Spring Boot modular monolith backend, SQLite persistence, and secure session-based admin portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

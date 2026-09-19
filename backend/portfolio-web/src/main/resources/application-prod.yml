@@ -1,0 +1,17 @@
+# Production Configuration Profile
+spring:
+  jpa:
+    show-sql: false
+
+logging:
+  level:
+    com.portfolio: INFO
+    org.springframework.security: WARN
+    root: INFO
+
+server:
+  servlet:
+    session:
+      cookie:
+        secure: true
+        same-site: none
