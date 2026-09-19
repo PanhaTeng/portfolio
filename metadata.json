@@ -2,6 +2,7 @@
   "name": "Panha Teng - Financial Systems Backend Developer",
   "description": "Portfolio of Panha Teng, Senior Backend Developer specializing in financial systems, C#/.NET Core, Java Spring Boot, banking integrations (Bakong, T24, eKYC, AIA), and resilient backend workflows.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
-
